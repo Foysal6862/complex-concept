@@ -88,7 +88,7 @@ var v = [v1, v2, v3];
 printName.apply(sakib, v);
  */
 
-var printName = function(v1, v2, v3) {
+/* var printName = function(v1, v2, v3) {
     console.log(`${this.name} is ${v1}, ${v2} & ${v3}`);
 };
 var sakib = {
@@ -101,4 +101,13 @@ var v3 = 'Best Player';
 var v = [v1, v2, v3];
 
 var newFunc = printName.bind(sakib, v1, v2, v3);
-newFunc();
+newFunc(); */
+
+//new binding
+
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+    console.log(`${this.name} is ${this.age} years old`);
+}
+var sakib = new Person('Sakib', 39);

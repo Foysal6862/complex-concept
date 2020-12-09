@@ -33,7 +33,7 @@ console.log(sakib.play()); */
 // class
 
 
-class Person {
+/* class Person {
     //parent class
     constructor(name, age) {
         this.name = name;
@@ -62,31 +62,29 @@ class Cricketer extends Person{
 
 let sakib = new Cricketer('Sakib', 30, 'All rounder', 'Bangladesh');
 // console.log(sakib.name);
-console.log(sakib.play());
+console.log(sakib.play()); */
 
+// Getter
 
-/* function Person(name, age) {
-    this.name = name;
-    this.age = age;
-}
-function Cricketer(name, age, type, country) {
-    Person.call(this);
-    this.name = name;
-    this.age = age;
-    this.type = type;
-    this.country = country;
-}
-
-Person.prototype = {
-    eat: function() {
-        console.log(`${this.name} is eating.`);
+class Person {
+    constructor(name, age) {
+        this.name = name;//property
+        this.age = age;
     }
-};
-Cricketer.prototype = Object.create(Person.prototype);
-Cricketer.prototype.Constructor = Cricketer;
+    eat(){
+        // method
+        console.log(`${this.name} is eating`);
+    }
 
-let sakib = new Cricketer("sakib", 36, "all rounder", "Bangladesh");
-console.log(sakib.eat());
- */
+    get setName(){
+        //Getter
+        // return this.name;
+        return 'Foysal';
+
+    }
+}
+let sakib = new Person('Sakib', 30);
+console.log(sakib.setName);
+
 
 

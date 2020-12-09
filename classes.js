@@ -66,7 +66,7 @@ console.log(sakib.play()); */
 
 // Getter
 
-class Person {
+/* class Person {
     constructor(name, age) {
         this.name = name;//property
         this.age = age;
@@ -84,7 +84,34 @@ class Person {
     }
 }
 let sakib = new Person('Sakib', 30);
-console.log(sakib.setName);
+console.log(sakib.setName); */
+
+// setter
+
+class Person {
+    constructor(name, age) {
+        this.name = name;//property
+        this.age = age;
+    }
+    eat(){
+        // method
+        console.log(`${this.name} is eating`);
+    }
+
+    get setName(){
+        //Getter
+        // return this.name;
+        return 'Foysal';
+
+    }
+    set setName(name){
+        this.name = name;
+    }
+}
+let sakib = new Person('Sakib', 30);
+
+sakib.setName = "Sakib Khan";
+console.log(sakib.name);
 
 
 

@@ -12,7 +12,7 @@ sakib.printPlayerName(); */
 
 //example:02
 
-var printPlayerNameFunction = function(obj) {
+/* var printPlayerNameFunction = function(obj) {
     obj.printPlayerName = function() {
         console.log(this.name);
         console.log(this.age);
@@ -32,3 +32,19 @@ printPlayerNameFunction(sakib);
 printPlayerNameFunction(tamim);
 sakib.printPlayerName();
 tamim.printPlayerName();
+ */
+
+ //example:03
+
+ var Person = function(name, age) {
+     return {
+         name : name,
+         age : age,
+         printName : function() {
+             console.log(this.name);
+         }
+     }
+ };
+
+ var sakib = Person('Sakib', 39);
+ sakib.printName();

@@ -36,7 +36,7 @@ tamim.printPlayerName();
 
  //example:03
 
- var Person = function(name, age) {
+ /* var Person = function(name, age) {
      return {
          name : name,
          age : age,
@@ -56,4 +56,49 @@ tamim.printPlayerName();
 
  var sakib = Person('Sakib', 39);
  sakib.printName();// sakib
- sakib.father.printName();//salam ali
+ sakib.father.printName();//salam ali */
+
+
+
+//  explicit binding
+
+/* var printName = function() {
+    console.log(this.name);
+};
+var sakib = {
+    name : 'Sakib',
+    age : 39,
+};
+
+printName.call(sakib); */
+
+
+/* var printName = function(v1, v2, v3) {
+    console.log(`${this.name} is ${v1}, ${v2} & ${v3}`);
+};
+var sakib = {
+    name : 'Sakib',
+    age : 39,
+};
+var v1 = 'Handsome';
+var v2 = 'All-rounder';
+var v3 = 'Best Player';
+var v = [v1, v2, v3];
+
+printName.apply(sakib, v);
+ */
+
+var printName = function(v1, v2, v3) {
+    console.log(`${this.name} is ${v1}, ${v2} & ${v3}`);
+};
+var sakib = {
+    name : 'Sakib',
+    age : 39,
+};
+var v1 = 'Handsome';
+var v2 = 'All-rounder';
+var v3 = 'Best Player';
+var v = [v1, v2, v3];
+
+var newFunc = printName.bind(sakib, v1, v2, v3);
+newFunc();

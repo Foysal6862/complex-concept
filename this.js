@@ -42,9 +42,18 @@ tamim.printPlayerName();
          age : age,
          printName : function() {
              console.log(this.name);
+         },
+         father: {
+             name : 'Salam ali',
+             age : 60,
+             printName : function() {
+                 console.log(this.name);
+             }
+
          }
      }
  };
 
  var sakib = Person('Sakib', 39);
- sakib.printName();
+ sakib.printName();// sakib
+ sakib.father.printName();//salam ali

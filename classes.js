@@ -88,7 +88,7 @@ console.log(sakib.setName); */
 
 // setter
 
-class Person {
+/* class Person {
     constructor(name, age) {
         this.name = name;//property
         this.age = age;
@@ -111,7 +111,32 @@ class Person {
 let sakib = new Person('Sakib', 30);
 
 sakib.setName = "Sakib Khan";
-console.log(sakib.name);
+console.log(sakib.name); */
+
+//static methods
+
+class Person {
+    constructor(name, age) {
+        this.name = name;//property
+        this.age = age;
+    }
+    eat(){
+        // method
+        console.log(`${this.name} is eating`);
+    }
+
+    static isEqualAge(cricketer1, cricketer2){
+        // 01.console.log('This is static method');
+        return cricketer1.age === cricketer2.age;
+
+    }
+}
+let sakib = new Person('Sakib', 30); 
+let tamim = new Person('Tamim', 30); 
+
+//01. Person.isEqualAge();
+console.log(Person.isEqualAge(sakib, tamim));
+
 
 
 

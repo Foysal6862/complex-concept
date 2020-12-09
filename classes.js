@@ -115,7 +115,7 @@ console.log(sakib.name); */
 
 //static methods
 
-class Person {
+/* class Person {
     constructor(name, age) {
         this.name = name;//property
         this.age = age;
@@ -135,8 +135,43 @@ let sakib = new Person('Sakib', 30);
 let tamim = new Person('Tamim', 30); 
 
 //01. Person.isEqualAge();
-console.log(Person.isEqualAge(sakib, tamim));
+console.log(Person.isEqualAge(sakib, tamim)); */
 
 
+//polymorphism
 
+class Person {
+    //parent class
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    play() {
+        console.log(`${this.name} is playing`);
+    }
+}
+
+class Cricketer extends Person{
+    //sub class
+    constructor(name, age, type, country) {
+
+        super(name, age);
+
+        this.name = name;
+        this.age =age;
+        this.type = type;
+        this.country = country;
+    }
+    // play() {
+    //     console.log(`${this.name} is playing cricket`);
+    // }
+    play(){
+        super.play();
+        console.log(`${this.name} is playing cricket`);
+    }
+}
+
+let sakib = new Cricketer('Sakib', 30, 'All rounder', 'Bangladesh');
+// console.log(sakib.name);
+console.log(sakib.play());
 
